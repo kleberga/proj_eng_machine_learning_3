@@ -21,4 +21,6 @@ Diagrama das etapas necessárias para o projeto:
 
 ## Questão 4
 
+Os artefatos que serão criados no projeto são:
 
+- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para treinamento dos modelos. As colunas do
