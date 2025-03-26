@@ -6,14 +6,11 @@ Aluno: Kleber Giovelli Abitante
 
 Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
-## Rules and guidelines
+## Questão 2
 
-In order to get the best out of the template:
+Diagrama das etapas necessárias para o projeto
 
-* Don't remove any lines from the `.gitignore` file we provide
-* Make sure your results can be reproduced by following a data engineering convention
-* Don't commit data to your repository
-* Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
+![Diagrama](diagrama_2.png)
 
 ## How to install dependencies
 
