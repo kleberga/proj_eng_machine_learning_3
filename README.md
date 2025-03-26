@@ -8,89 +8,16 @@ Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 ## Questão 2
 
-Diagrama das etapas necessárias para o projeto
+Diagrama das etapas necessárias para o projeto:
 
 ![Diagrama](diagrama_2.png)
 
-## How to install dependencies
+## Questão 3
 
-Declare any dependencies in `requirements.txt` for `pip` installation.
+a. Streamlit: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dandos. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e criar aplicações que permitam ao usuário interagir com a aplicação;
+b. MLFlow: permite o rastreamento de experimentos de machine learning, registro e controle de versões dos modelos, provisionamento (deployment) em plataformas na nuvem, em contêineres Docker ou em REST APIs e monitorar e gerenciar a saúde dos modelos;
+c. PyCaret: é uma biblioteca que possui funções que automatizam o pré-processamento, treinamento e avaliação de modelos de machine learning. Ela permite buscar os melhores hiperparâmetros e comparar modelos de forma fácil e com a utilização de poucos métodos. Pode ser utilizada também na atualização de modelos; e
+d. Scikit-Learn: é uma ferramenta para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos.
 
-To install them, run:
-
-```
-pip install -r requirements.txt
-```
 
 ## How to run your Kedro pipeline
-
-You can run your Kedro project with:
-
-```
-kedro run
-```
-
-## How to test your Kedro project
-
-Have a look at the file `src/tests/test_run.py` for instructions on how to write your tests. You can run your tests as follows:
-
-```
-pytest
-```
-
-You can configure the coverage threshold in your project's `pyproject.toml` file under the `[tool.coverage.report]` section.
-
-
-## Project dependencies
-
-To see and update the dependency requirements for your project use `requirements.txt`. You can install the project requirements with `pip install -r requirements.txt`.
-
-[Further information about project dependencies](https://docs.kedro.org/en/stable/kedro_project_setup/dependencies.html#project-specific-dependencies)
-
-## How to work with Kedro and notebooks
-
-> Note: Using `kedro jupyter` or `kedro ipython` to run your notebook provides these variables in scope: `context`, 'session', `catalog`, and `pipelines`.
->
-> Jupyter, JupyterLab, and IPython are already included in the project requirements by default, so once you have run `pip install -r requirements.txt` you will not need to take any extra steps before you use them.
-
-### Jupyter
-To use Jupyter notebooks in your Kedro project, you need to install Jupyter:
-
-```
-pip install jupyter
-```
-
-After installing Jupyter, you can start a local notebook server:
-
-```
-kedro jupyter notebook
-```
-
-### JupyterLab
-To use JupyterLab, you need to install it:
-
-```
-pip install jupyterlab
-```
-
-You can also start JupyterLab:
-
-```
-kedro jupyter lab
-```
-
-### IPython
-And if you want to run an IPython session:
-
-```
-kedro ipython
-```
-
-### How to ignore notebook output cells in `git`
-To automatically strip out all output cell contents before committing to `git`, you can use tools like [`nbstripout`](https://github.com/kynan/nbstripout). For example, you can add a hook in `.git/config` with `nbstripout --install`. This will run `nbstripout` before anything is committed to `git`.
-
-> *Note:* Your output cells will be retained locally.
-
-## Package your Kedro project
-
-[Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html)
