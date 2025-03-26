@@ -90,13 +90,13 @@ A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para 
 
 ## Questão 6
 
-A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as estatísticas de *log loss* e *F1 score*.
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as métricas de *log loss* e *F1 score*.
 
 **Figura 5** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão:
 
 ![Pipeline de "Treinamento" da árvore de decisão](treinamento_1.PNG)
 
-A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as estatísticas de *log loss* e *F1 score*.
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as métricas de *log loss* e *F1 score*.
 
 **Figura 6** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística:
 
