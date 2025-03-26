@@ -8,7 +8,7 @@ Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 ## Questão 2
 
-Figura 1 - Diagrama das etapas necessárias para o projeto:
+**Figura 1** - Diagrama das etapas necessárias para o projeto:
 
 ![Diagrama](diagrama_2.png)
 
@@ -74,16 +74,16 @@ Os artefatos que serão criados no projeto são:
 
 A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-Figura 2 - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento:
+**Figura 2** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento:
 
 ![Pipeline de "PreparacaoDados" para a base de desenvolvimento](preparacaoDados_1.PNG)
 
 A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de produção, o qual também remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-Figura 3 - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção:
+**Figura 3** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção:
 
 ![Pipeline de "PreparacaoDados" para a base de produção](preparacaoDados_2.PNG)
 
-Figura 4 - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste:
+**Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste:
 
 ![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
