@@ -87,3 +87,18 @@ A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para 
 **Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste:
 
 ![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
+
+## Questão 6
+
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão.
+
+**Figura 5** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão:
+
+![Pipeline de "Treinamento" da árvore de decisão](treinamento_1.PNG)
+
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística.
+
+**Figura 6** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística:
+
+![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
+
