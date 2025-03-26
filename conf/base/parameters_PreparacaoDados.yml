@@ -1,0 +1,7 @@
+# This is a boilerplate parameters config generated for pipeline 'PreparacaoDados'
+# using Kedro 0.19.11.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.19.11/configuration/parameters.html
+dev_description: 'Dataset para desenvolvimento salvo em data/01_raw/dataset_kobe_dev.parquet'
+prod_description: 'Dataset para produção salvo em data/01_raw/dataset_kobe_prod.parquet'

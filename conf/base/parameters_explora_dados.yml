@@ -1,0 +1,13 @@
+# This is a boilerplate parameters config generated for pipeline 'explora_dados'
+# using Kedro 0.19.11.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.19.11/configuration/parameters.html
+dev_caminho_salvo: "data/01_raw/dataset_kobe_dev.parquet"
+prod_caminho_salvo: "data/01_raw/dataset_kobe_prod.parquet"
+dev_url: "https://github.com/tciodaro/eng_ml/raw/refs/heads/main/data/dataset_kobe_dev.parquet"
+prod_url: "https://github.com/tciodaro/eng_ml/raw/refs/heads/main/data/dataset_kobe_prod.parquet"
+dev_descricao: "Baixar os dados de arremessos de Kobe Bryant para desenvolvimento de modelo"
+prod_descricao: "Baixar os dados de arremessos de Kobe Bryant para produção"
+dev_descricao_explor: "Explorar o dataset de desenvolvimento de modelo"
+prod_descricao_explor: "Explorar o dataset de produção"

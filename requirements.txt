@@ -1,0 +1,14 @@
+ipython
+jupyterlab
+kedro
+notebook
+scikit-learn
+kedro[jupyter]
+pandas
+pyarrow
+fastparquet
+kedro-datasets
+openpyxl
+pycaret
+mlflow
+scikit-optimize

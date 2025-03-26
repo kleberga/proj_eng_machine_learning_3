@@ -1,0 +1,41 @@
+df_dev:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/dataset_kobe_dev.parquet
+
+df_prod:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/dataset_kobe_prod.parquet
+
+df_explorado_dev:
+  type: pandas.ExcelDataset
+  filepath: data/08_reporting/df_explorado_dev.xlsx
+
+df_explorado_prod:
+  type: pandas.ExcelDataset
+  filepath: data/08_reporting/df_explorado_prod.xlsx
+
+data_filtered_dev:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/data_filtered_dev.parquet
+
+data_filtered_prod:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/data_filtered_prod.parquet
+
+base_train:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/base_train.parquet
+
+base_test:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/base_test.parquet
+
+model_lr:
+  type: pickle.PickleDataset
+  filepath: data/06_models/model_lr.pkl
+  versioned: true
+
+model_dt:
+  type: pickle.PickleDataset
+  filepath: data/06_models/model_dt.pkl
+  versioned: true
