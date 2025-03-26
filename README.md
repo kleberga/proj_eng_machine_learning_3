@@ -84,6 +84,8 @@ A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para 
 
 ![Pipeline de "PreparacaoDados" para a base de produção](preparacaoDados_2.PNG)
 
+A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento e teste.
+
 **Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste:
 
 ![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
