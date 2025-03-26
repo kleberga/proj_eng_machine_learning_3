@@ -1,12 +1,10 @@
-# kedro-eng-mac-proj-3
+# Projeto da disciplina Engenharia de Machine Learning [25E1_3]
 
-[![Powered by Kedro](https://img.shields.io/badge/powered_by-kedro-ffc900?logo=kedro)](https://kedro.org)
+## Questão 1
 
-## Overview
+Aluno: Kleber Giovelli Abitante
 
-This is your new Kedro project, which was generated using `kedro 0.19.12`.
-
-Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
+Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 ## Rules and guidelines
 
