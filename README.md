@@ -23,7 +23,7 @@ Diagrama das etapas necessárias para o projeto:
 
 Os artefatos que serão criados no projeto são:
 
-- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para treinamento dos modelos. As colunas da base de dados são:
+- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para treinamento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são:
   1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos;
   2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos;
   3. *game_event_id*: identificador único de cada evento;
@@ -49,3 +49,5 @@ Os artefatos que serão criados no projeto são:
   23. *opponent*: equipe adversária de LA na partida;
   24. *shot_made_flag*: marcação se o arremesso teve sucesso (1) ou não (0); e
   25. *shot_id*: identificador único de cada arremesso.
+- **dataset_kobe_prod.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada no modelo final no ambiente de produção. A base contém 25 colunas e 6.426 linhas. As colunas da base de dados são as mesmas da base anterior;
+- **data_filtered_dev.parquet**: 
