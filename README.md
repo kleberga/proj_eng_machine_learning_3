@@ -49,5 +49,14 @@ Os artefatos que serão criados no projeto são:
   23. *opponent*: equipe adversária de LA na partida;
   24. *shot_made_flag*: marcação se o arremesso teve sucesso (1) ou não (0); e
   25. *shot_id*: identificador único de cada arremesso.
-- **dataset_kobe_prod.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada no modelo final no ambiente de produção. A base contém 25 colunas e 6.426 linhas. As colunas da base de dados são as mesmas da base anterior;
-- **data_filtered_dev.parquet**: 
+- **dataset_kobe_prod.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada com o modelo final no ambiente de produção. A base contém 25 colunas e 6.426 linhas. As colunas da base de dados são as mesmas da base anterior;
+- **data_filtered_dev.parquet**: base de dados com exclusão das linhas com valores faltantes e contendo apenas as colunas a serem utilizadas no treinamento dos modelos. A base contém 7 colunas e 20.285 linhas. As colunas são:
+  1. *lat*;
+  2. *lon*;
+  3. *minutes_remaining*;
+  4. *period*;
+  5. *playoffs*;
+  6. *shot_distance*; e
+  7. *shot_made_flag*.
+- **data_filtered_prod.parquet**: base de dados com exclusão das linhas com valores faltantes e contendo apenas as colunas a serem utilizadas com o modelo final no ambiente de produção. A base contém 7 colunas e 5.412 linhas. As colunas são as mesmas da base anterior.
+- 
