@@ -1,12 +1,12 @@
-# **Projeto da disciplina Engenharia de Machine Learning [25E1_3]**
+# Projeto da disciplina Engenharia de Machine Learning [25E1_3]
 
-## **Questão 1**
+## Questão 1
 
 Aluno: Kleber Giovelli Abitante
 
 Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
-## **Questão 2**
+## Questão 2
 
 **Figura 1** - Diagrama das etapas necessárias para o projeto:
 
