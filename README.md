@@ -10,13 +10,13 @@ Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 A figura abaixo mostra os arquivos originais (baixados do site) na pasta *01_raw* do projeto:
 
-**Figura 1** - Arquivos na pasta *01_raw*
+**Figura 1** - Arquivos na pasta *01_raw*.
 
 ![Arquivos na pasta raw](raw.PNG)
 
 A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 
-**Figura 2** - Diagrama das etapas necessárias para o projeto:
+**Figura 2** - Diagrama das etapas necessárias para o projeto.
 
 ![Diagrama](diagrama_2.png)
 
@@ -82,19 +82,19 @@ Os artefatos que serão criados no projeto são:
 
 A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-**Figura 3** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento:
+**Figura 3** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento.
 
 ![Pipeline de "PreparacaoDados" para a base de desenvolvimento](preparacaoDados_1.PNG)
 
 A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de produção, o qual também remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-**Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção:
+**Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção.
 
 ![Pipeline de "PreparacaoDados" para a base de produção](preparacaoDados_2.PNG)
 
 A imagem a seguir mostra os arquivos filtrados e com eliminação de valores faltantes salvos na pasta *02_intermediate*.
 
-**Figura 5** - Imagem dos arquivos filtrados
+**Figura 5** - Imagem dos arquivos filtrados.
 
 ![Imagem dos arquivos filtrados](preparacaoDados_5.PNG)
 
@@ -106,7 +106,7 @@ A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para 
 
 A imagem a seguir mostra os arquivos de treinamento e de teste, após a separação em 80% para treinamento e o restante para teste.
 
-**Figura 7** - Base de treinamento e de teste após a separação
+**Figura 7** - Base de treinamento e de teste após a separação.
 
 ![Bases de treinamento e teste](preparacaoDados_4.PNG)
 
@@ -114,25 +114,25 @@ A imagem a seguir mostra os arquivos de treinamento e de teste, após a separaç
 
 A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as métricas de *log loss* e *F1 score*.
 
-**Figura 8** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão:
+**Figura 8** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão.
 
 ![Pipeline de "Treinamento" da árvore de decisão](treinamento_1.PNG)
 
 A próxima imagem mostra o artefato referente ao modelo de árvore de decisão.
 
-**Figura 9** - Artefatos do modelo de árvore de decisão:
+**Figura 9** - Artefato do modelo de árvore de decisão:
 
 ![Artefato do modelo de árvore de decisão](treinamento_11.PNG)
 
 A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as métricas de *log loss* e *F1 score*.
 
-**Figura 10** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística:
+**Figura 10** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística.
 
 ![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
 
 A imagem a seguir mostra o artefato da regressão logística.
 
-**Figura 11** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística:
+**Figura 11** - Artefato do modelo de regressão logística:
 
 ![Artefato de modelo de regressão logística](treinamento_21.PNG)
 
@@ -142,13 +142,13 @@ O modelo escolhido para finalização foi a **regressão logística**, pois apre
 
 A imagem a seguir mostra a inicialização do MLFlow server:
 
-**Figura 12** - Inicialização do MLFlow server
+**Figura 12** - Inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
 A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow
 
-**Figura 13** - Inicialização do MLFlow server
+**Figura 13** - Inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
