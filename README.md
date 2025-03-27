@@ -104,3 +104,19 @@ A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do mo
 
 ![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
 
+O modelo escolhido para finalização foi a regressão logística, pois apresentou o maior valor de *F1 score* e o menor valor de *log loss*, em relação à árvore de decisão.
+
+## Questão 7
+
+A imagem a seguir mostra a inicialização do MLFlow server:
+
+**Figura 7** - Inicialização do MLFlow server
+
+![Inicialização do MLFlow server](iniciar_server.PNG)
+
+A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow
+
+**Figura 8** - Inicialização do MLFlow server
+
+![Inicialização do MLFlow server](iniciar_server.PNG)
+
