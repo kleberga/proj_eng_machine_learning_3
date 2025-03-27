@@ -5,7 +5,7 @@ Função para enviar uma base de dados para a API que está provisionando o mode
 import json
 import requests
 import pandas as pd
-from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.metrics import f1_score
 import mlflow
 import os
 
