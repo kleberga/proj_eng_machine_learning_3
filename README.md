@@ -190,3 +190,17 @@ As diferenças significativas nas distribuições entre os dados de desenvolvime
 </div>
 
 Nesta situação, entendo-se que as distribuições das variáveis sofreram de fato alterações (não se trata de erro de mensuração), deveria ocorrer um novo processo de busca por um modelo adequado, desta vez utilizando-se apenas os dados de produção, pois os dados de desenvolvimento não refletem mais, de forma adequada, a população que originou aqueles dados.
+
+### b)
+
+Quando a variável de resposta está disponível, a avaliação do modelo em operação pode ser feita a seguinte forma:
+1. Utilizando métricas de performance. Para modelos de classificação, podem ser utilizadas as métricas como *accuracy*, *recall*, *precision*, *F1-score* e área sob a curva ROC. Para modelos de regressão, podem ser utilizadas as métricas de Erro Absoluto Médio, Erro Quadrático Médio e R-quadrado;
+2. Monitorar a ocorrência de *concept drif* comparando os *inputs* e as projeções;
+3. Identificar erros, quando as projeções se distanciaram muito dos *inputs*; e
+4. Atualizar o modelo periodicamente com novos dados, a fim de mantê-lo atualizado.
+
+Quando a variável de resposta não está disponível, podem ser utilizadas as seguintes medidas:
+1. Verificar a qualidade dos *inputs*;
+2. Comparar as projeções do modelo com benchmarks disponíveis no mercado;
+3. Realizar *A/B Testing*, que consiste que em comparar as projeções do modelo com aquelas geradas por outro modelo mais simples; e
+4. Receber *feedback* dos usuários.
