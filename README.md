@@ -74,7 +74,7 @@ Os artefatos que serão criados no projeto são:
 - **model_lr.pkl**: modelo de regressão logística criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **modelo final registrado**: modelo final registrado no MLFlow;
 - **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção; e
-- **criar um dashboard**: criar um dashboard para monitorar o modelo em produção.
+- **dashboard**: dashboard para monitorar o modelo em produção.
 
 ## Questão 5
 
