@@ -8,14 +8,14 @@ Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 ## Questão 2
 
-Figura 1 - Diagrama das etapas necessárias para o projeto:
+**Figura 1** - Diagrama das etapas necessárias para o projeto:
 
 ![Diagrama](diagrama_2.png)
 
 ## Questão 3
 
-- **Streamlit**: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dandos. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e adicionar botões e menus que permitam ao usuário interagir com a aplicação;
-- **MLFlow**: permite o rastreamento de experimentos de machine learning, registro e controle de versões dos modelos, provisionamento (deployment) em plataformas na nuvem, em contêineres Docker ou em REST APIs e monitorar e gerenciar a saúde dos modelos;
+- **Streamlit**: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dandos. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e adicionar botões e menus que permitam ao usuário interagir com a aplicação. Além disso, a aplicação pode auxiliar a monitorar e gerenciar a saúde dos modelos;
+- **MLFlow**: permite o rastreamento de experimentos de machine learning, registro e controle de versões dos modelos e provisionamento (deployment) em plataformas na nuvem, em contêineres Docker ou em REST APIs;
 - **PyCaret**: é uma biblioteca que possui funções que automatizam o pré-processamento, treinamento e avaliação de modelos de machine learning. Ela permite buscar os melhores hiperparâmetros e comparar modelos de forma fácil e com a utilização de poucas funções. Pode ser utilizada também na atualização de modelos; e
 - **Scikit-Learn**: é uma ferramenta que possui funções para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos.
 
@@ -67,23 +67,40 @@ Os artefatos que serão criados no projeto são:
 - **model_dt.pkl**: modelo de árvore de decisão criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **model_lr.pkl**: modelo de regressão logística criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **modelo final registrado**: modelo final registrado no MLFlow;
-- **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção; e 
+- **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção; e
 - **criar um dashboard**: criar um dashboard para monitorar o modelo em produção.
 
 ## Questão 5
 
 A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-Figura 2 - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento:
+**Figura 2** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento:
 
-![Pipeline de "PreparacaoDados" para a base de desenvolvimento](preparacaoDados_1.png)
+![Pipeline de "PreparacaoDados" para a base de desenvolvimento](preparacaoDados_1.PNG)
 
 A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de produção, o qual também remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-Figura 3 - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção:
+**Figura 3** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção:
 
-![Pipeline de "PreparacaoDados" para a base de produção](preparacaoDados_2.png)
+![Pipeline de "PreparacaoDados" para a base de produção](preparacaoDados_2.PNG)
 
-Figura 4 - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste:
+A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento e teste.
 
-![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.png)
+**Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste:
+
+![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
+
+## Questão 6
+
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as métricas de *log loss* e *F1 score*.
+
+**Figura 5** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão:
+
+![Pipeline de "Treinamento" da árvore de decisão](treinamento_1.PNG)
+
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as métricas de *log loss* e *F1 score*.
+
+**Figura 6** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística:
+
+![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
+
