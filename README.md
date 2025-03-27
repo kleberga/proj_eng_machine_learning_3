@@ -8,6 +8,12 @@ Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 ## Questão 2
 
+A figura abaixo mostra os arquivos originais (baixados do site) na pasta *raw* do projeto:
+
+**Figura 1** - Arquivos na pasta *raw*
+
+
+
 **Figura 1** - Diagrama das etapas necessárias para o projeto:
 
 ![Diagrama](diagrama_2.png)
