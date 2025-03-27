@@ -202,5 +202,6 @@ Quando a variável de resposta está disponível, a avaliação do modelo em ope
 Quando a variável de resposta não está disponível, podem ser utilizadas as seguintes medidas:
 1. Verificar a qualidade dos *inputs*;
 2. Comparar as projeções do modelo com benchmarks disponíveis no mercado;
-3. Realizar *A/B Testing*, que consiste que em comparar as projeções do modelo com aquelas geradas por outro modelo mais simples; e
-4. Receber *feedback* dos usuários.
+3. Detectar *outliers* nos dados de *input*, a fim de assegurar que o modelo não está exposto a dados muito discrepantes daqueles usados em seu treinamento;
+4. Realizar *A/B Testing*, que consiste que em comparar as projeções do modelo com aquelas geradas por outro modelo mais simples; e
+5. Receber *feedback* dos usuários.
