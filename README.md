@@ -8,6 +8,12 @@ Repositório: https://github.com/kleberga/proj_eng_machine_learning_3
 
 ## Questão 2
 
+A figura abaixo mostra os arquivos originais (baixados do site) na pasta *raw* do projeto:
+
+**Figura 1** - Arquivos na pasta *raw*
+
+
+
 **Figura 1** - Diagrama das etapas necessárias para o projeto:
 
 ![Diagrama](diagrama_2.png)
@@ -103,4 +109,20 @@ A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do mo
 **Figura 6** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística:
 
 ![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
+
+O modelo escolhido para finalização foi a **regressão logística**, pois apresentou o maior valor de *F1 score* e o menor valor de *log loss*, em relação à árvore de decisão.
+
+## Questão 7
+
+A imagem a seguir mostra a inicialização do MLFlow server:
+
+**Figura 7** - Inicialização do MLFlow server
+
+![Inicialização do MLFlow server](iniciar_server.PNG)
+
+A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow
+
+**Figura 8** - Inicialização do MLFlow server
+
+![Inicialização do MLFlow server](iniciar_server.PNG)
 
