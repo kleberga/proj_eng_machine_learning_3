@@ -158,3 +158,5 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
+### a)
+O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a 
