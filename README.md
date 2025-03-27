@@ -104,7 +104,7 @@ A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do mo
 
 ![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
 
-O modelo escolhido para finalização foi a regressão logística, pois apresentou o maior valor de *F1 score* e o menor valor de *log loss*, em relação à árvore de decisão.
+O modelo escolhido para finalização foi a **regressão logística**, pois apresentou o maior valor de *F1 score* e o menor valor de *log loss*, em relação à árvore de decisão.
 
 ## Questão 7
 
