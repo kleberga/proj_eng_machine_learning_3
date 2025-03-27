@@ -188,3 +188,5 @@ As diferenças significativas nas distribuições entre os dados de desenvolvime
   <img src="histogram_dev_shot_made_flag.png" alt="Image 1" style="width: 48%;"/>
   <img src="histogram_prod_shot_made_flag.png" alt="Image 2" style="width: 48%;"/>
 </div>
+
+Nesta situação, entendo-se que as distribuições das variáveis sofreram de fato alterações (não se trata de erro de mensuração), deveria ocorrer um novo processo de busca por um modelo adequado, desta vez utilizando-se apenas os dados de produção.
