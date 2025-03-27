@@ -189,4 +189,4 @@ As diferenças significativas nas distribuições entre os dados de desenvolvime
   <img src="histogram_prod_shot_made_flag.png" alt="Image 2" style="width: 48%;"/>
 </div>
 
-Nesta situação, entendo-se que as distribuições das variáveis sofreram de fato alterações (não se trata de erro de mensuração), deveria ocorrer um novo processo de busca por um modelo adequado, desta vez utilizando-se apenas os dados de produção.
+Nesta situação, entendo-se que as distribuições das variáveis sofreram de fato alterações (não se trata de erro de mensuração), deveria ocorrer um novo processo de busca por um modelo adequado, desta vez utilizando-se apenas os dados de produção, pois os dados de desenvolvimento não refletem mais, de forma adequada, a população que originou aqueles dados.
