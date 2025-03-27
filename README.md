@@ -136,6 +136,12 @@ A imagem a seguir mostra o artefato da regressão logística.
 
 ![Artefato de modelo de regressão logística](treinamento_21.PNG)
 
+A imagem a seguir mostra os modelos salvos na pasta *06_models*.
+
+**Figura 12** - Modelos salvos.
+
+![Modelos salvos](modelos_salvos.PNG)
+
 O modelo escolhido para finalização foi a **regressão logística**, pois apresentou o maior valor de *F1 score* e o menor valor de *log loss*, em relação à árvore de decisão.
 
 ## Questão 7
