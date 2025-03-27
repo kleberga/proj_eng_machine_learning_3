@@ -148,7 +148,7 @@ A imagem a seguir mostra a inicialização do MLFlow server.
 
 A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow.
 
-**Figura 13** - Inicialização do MLFlow server.
+**Figura 13** - Inicialização da API do modelo escolhido usando o MLFlow.
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
