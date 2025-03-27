@@ -132,7 +132,7 @@ A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do mod
 
 A imagem a seguir mostra o artefato da regressão logística.
 
-**Figura 11** - Artefato do modelo de regressão logística:
+**Figura 11** - Artefato do modelo de regressão logística.
 
 ![Artefato de modelo de regressão logística](treinamento_21.PNG)
 
@@ -140,15 +140,15 @@ O modelo escolhido para finalização foi a **regressão logística**, pois apre
 
 ## Questão 7
 
-A imagem a seguir mostra a inicialização do MLFlow server:
+A imagem a seguir mostra a inicialização do MLFlow server.
 
 **Figura 12** - Inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
-A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow
+A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow.
 
 **Figura 13** - Inicialização do MLFlow server.
 
-![Inicialização do MLFlow server](iniciar_server.PNG)
+![Provisionamento do modelo](provisionamento.PNG)
 
