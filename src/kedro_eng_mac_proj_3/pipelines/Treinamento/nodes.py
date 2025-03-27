@@ -1,6 +1,5 @@
 """
-This is a boilerplate pipeline 'Treinamento'
-generated using Kedro 0.19.11
+Função para treinar modelos de classificação
 """
 
 import mlflow
@@ -8,6 +7,7 @@ from pycaret.classification import *
 from sklearn.metrics import log_loss
 from sklearn.metrics import f1_score
 import pickle
+import os
 
 def train_model(train, test, modelo, description, session_id):
     mlflow.set_tracking_uri('http://localhost:5000')
@@ -31,5 +31,6 @@ def train_model(train, test, modelo, description, session_id):
         mlflow.log_metric("f1_value", f1)
         mlflow.sklearn.log_model(tuned_res, "model")
         mlflow.log_artifact("model.pkl")
+        os.remove("model.pkl")
     return tuned_res
 

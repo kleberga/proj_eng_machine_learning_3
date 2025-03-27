@@ -12,3 +12,4 @@ openpyxl
 pycaret
 mlflow
 scikit-optimize
+virtualenv

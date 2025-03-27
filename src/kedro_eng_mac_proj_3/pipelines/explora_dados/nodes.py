@@ -24,6 +24,7 @@ def download_data(caminho_salvo, url_arquivo, descricao):
                 file.write(resp.content)
             df = pd.read_parquet("file.parquet")
             mlflow.log_artifact("file.parquet")
+        os.remove("file.parquet")
         mlflow.log_metric("file_rows", len(df))
         mlflow.log_metric("file_columns", len(df.columns))
         mlflow.end_run()
