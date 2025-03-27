@@ -12,7 +12,7 @@ A figura abaixo mostra os arquivos originais (baixados do site) na pasta *raw* d
 
 **Figura 1** - Arquivos na pasta *raw*
 
-
+![Arquivos na pasta raw](raw.PNG)
 
 **Figura 1** - Diagrama das etapas necessárias para o projeto:
 
