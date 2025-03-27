@@ -168,4 +168,23 @@ O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero.
   <img src="histogram_prod_lon.png" alt="Image 2" style="width: 48%;"/>
 </div>
 
+As diferenças significativas nas distribuições entre os dados de desenvolvimento e de treinamento ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
 
+**Figura 16** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_minutes_remaining.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_minutes_remaining.png" alt="Image 2" style="width: 48%;"/>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_period.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_period.png" alt="Image 2" style="width: 48%;"/>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_shot_distance.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_shot_distance.png" alt="Image 2" style="width: 48%;"/>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_shot_made_flag.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_shot_made_flag.png" alt="Image 2" style="width: 48%;"/>
+</div>
