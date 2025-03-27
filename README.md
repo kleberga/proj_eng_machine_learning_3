@@ -14,6 +14,8 @@ A figura abaixo mostra os arquivos originais (baixados do site) na pasta *01_raw
 
 ![Arquivos na pasta raw](raw.PNG)
 
+A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
+
 **Figura 2** - Diagrama das etapas necessárias para o projeto:
 
 ![Diagrama](diagrama_2.png)
