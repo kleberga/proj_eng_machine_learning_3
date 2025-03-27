@@ -136,19 +136,27 @@ A imagem a seguir mostra o artefato da regressão logística.
 
 ![Artefato de modelo de regressão logística](treinamento_21.PNG)
 
+A imagem a seguir mostra os modelos salvos na pasta *06_models*.
+
+**Figura 12** - Modelos salvos.
+
+![Modelos salvos](modelos_salvos.PNG)
+
 O modelo escolhido para finalização foi a **regressão logística**, pois apresentou o maior valor de *F1 score* e o menor valor de *log loss*, em relação à árvore de decisão.
 
 ## Questão 7
 
 A imagem a seguir mostra a inicialização do MLFlow server.
 
-**Figura 12** - Inicialização do MLFlow server.
+**Figura 13** - Inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
 A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow.
 
-**Figura 13** - Inicialização da API do modelo escolhido usando o MLFlow.
+**Figura 14** - Inicialização da API do modelo escolhido usando o MLFlow.
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
+### a)
+O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a 
