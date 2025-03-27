@@ -148,13 +148,13 @@ O modelo escolhido para finalização foi a **regressão logística**, pois apre
 
 A imagem a seguir mostra a inicialização do MLFlow server.
 
-**Figura 12** - Inicialização do MLFlow server.
+**Figura 13** - Inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
 A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow.
 
-**Figura 13** - Inicialização da API do modelo escolhido usando o MLFlow.
+**Figura 14** - Inicialização da API do modelo escolhido usando o MLFlow.
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
