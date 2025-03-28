@@ -205,3 +205,9 @@ Quando a variável de resposta não está disponível, podem ser utilizadas as s
 3. Detectar *outliers* nos dados de *input*, a fim de assegurar que o modelo não está exposto a dados muito discrepantes daqueles usados em seu treinamento;
 4. Realizar *A/B Testing*, que consiste que em comparar as projeções do modelo com aquelas geradas por outro modelo mais simples; e
 5. Receber *feedback* dos usuários.
+
+### c)
+
+A estratégia reativa de retreinamento do modelo em operação consiste em atualizar o modelo em resposta a uma redução observável na performance do modelo ou a mudanças nos dados. O processo consiste em coletar novos dados, combinar os mesmos com os dados históricos, retreinar o modelo e validar o seu desempenho em relação ao modelo anterior. A vantagem dessa abordagem é garantir que o retreinamento irá ocorrer somente quando necessário, reduzindo custos computacionais. Por outro lado, a desvantagem é que, durante o intervalo de tempo entre a perda de perfomance do modelo e sua melhoria, o modelo irá gerar resultados de baixa qualidade.
+
+A estratégia preditiva de retreinamento do modelo consiste em atualizar o modelo proativamente, se antecipando a mudanças nos dados ou requisitos operacionais. O processo consiste em criar um pipeline que automaticamente coleta novos dados e retreina o modelo. A vantagem desta abordagem é a antecipação em relação a possíveis problemas que possam prejudicar a perfomance do modelo. A desvantagem é que retreinar o modelo em intervalos fixos de tempo pode significar uso desnecessário de recursos computacionais.
