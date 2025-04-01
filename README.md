@@ -105,7 +105,7 @@ A imagem a seguir mostra os arquivos filtrados e com eliminação de valores fal
 
 ![Imagem dos arquivos filtrados](preparacaoDados_5.PNG)
 
-A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento e teste.
+A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento (80% dos dados da base filtrada) e teste (20% da base filtrada). A separação ocorreu de forma aleatória e com estratificação pela variável *shot_made_flag*.
 
 **Figura 7** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste.
 
