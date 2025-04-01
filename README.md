@@ -169,9 +169,7 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow.
 
-**Figura 16** - PipelineAplicação no MLFlow.
 
-![PipelineAplicação - registro](pipelineAplicacao_1.PNG)
 
 A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação no MLFlow.
 
