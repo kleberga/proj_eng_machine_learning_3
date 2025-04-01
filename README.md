@@ -25,7 +25,7 @@ A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 - **Streamlit**: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dandos. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e adicionar botões e menus que permitam ao usuário interagir com a aplicação. Além disso, a aplicação pode auxiliar a monitorar e gerenciar a saúde dos modelos;
 - **MLFlow**: permite o rastreamento de experimentos de machine learning, registro e controle de versões dos modelos e provisionamento (deployment) em plataformas na nuvem, em contêineres Docker ou em REST APIs;
 - **PyCaret**: é uma biblioteca que possui funções que automatizam o pré-processamento, treinamento e avaliação de modelos de machine learning. Ela permite buscar os melhores hiperparâmetros e comparar modelos de forma fácil e com a utilização de poucas funções. Pode ser utilizada também na atualização de modelos; e
-- **Scikit-Learn**: é uma ferramenta que possui funções para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos. 
+- **Scikit-Learn**: é uma ferramenta que possui funções para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos.  
 
 ## Questão 4
 
