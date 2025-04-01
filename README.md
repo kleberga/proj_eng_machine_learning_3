@@ -50,7 +50,7 @@ Os artefatos que serão criados no projeto são:
   15. *shot_type*: pontos que poderiam ser obtidos no arremesso (2 ou 3 pontos);
   16. *shot_zone_area*: área da quadra de basquete de onde o arremesso foi executado (BC, C, LC, L, RC, R);
   17. *shot_zone_basic*: zona da quadra de basquete de onde o arremesso foi executado (7 diferentes áreas);
-  18. *shot_zone_range*: intervalo (em metros) de onde o arremesso foi executado (<8, 8-16, 16-24, 24+, fundo da quadra);
+  18. *shot_zone_range*: intervalo (em metros) do arremesso em relação à cesta (<8, 8-16, 16-24, 24+, fundo da quadra);
   19. *team_id*: código identificador do time de Kobe Bryant (Los Angeles Lakers - LA) (mesmo código em toda a base de dados);
   20. *team_name*: nome do time (LA) (mesmo nome em toda a base de dados);
   21. *game_date*: data em que o jogo ocorreu
