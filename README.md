@@ -180,7 +180,7 @@ A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação 
 ![PipelineAplicação - artefato](pipelineAplicacao_2.PNG)
 
 ### a)
-O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em um distribuição com característica bimodais, que não se assemelha à distribuição Normal.
+O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição das variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de desenvolvimento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em uma distribuição com característica bimodal, que não se assemelha à distribuição Normal.
 
 **Figura 18** - Histogramas da variável *lon* nas bases de desenvolvimento e de produção. 
 
@@ -189,7 +189,7 @@ O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero.
   <img src="histogram_prod_lon.png" alt="Image 2" style="width: 48%;"/>
 </div>
 
-As diferenças significativas nas distribuições entre os dados de desenvolvimento e de treinamento ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
+As diferenças significativas nas distribuições entre os dados de desenvolvimento e de produção ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
 
 **Figura 19** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
 
