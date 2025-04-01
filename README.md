@@ -111,7 +111,7 @@ A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para 
 
 ![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
 
-A imagem a seguir mostra os arquivos de treinamento e de teste, após a separação em 80% para treinamento e o restante para teste. A escolha das bases de treino e teste é fundamental para a definição do modelo final a ser utilizado. O ideal é que a escolha dos dados que irão compor as bases treino e teste seja feita de forma aleatória e com estratificação da variável *target*. Se a escolha não for aleatória e/ou não houver estratificação, existe o risco do modelo apresentar uma boa perfomance nos dados de treino mas um performance ruim nos dados de teste. Portanto, é importante que os dados nas duas bases apresentem distribuições de frequência não muito discrepantes.
+A imagem a seguir mostra os arquivos de treinamento e de teste, após a separação em 80% para treinamento e o restante para teste. A escolha das bases de treino e teste é fundamental para a definição do modelo final a ser utilizado. O ideal é que a escolha dos dados que irão compor as bases treino e teste seja feita de forma aleatória e com estratificação da variável *target*. Se a escolha não for aleatória e/ou não houver estratificação, pode haver viés nos dados e existe o risco do modelo apresentar uma boa perfomance nos dados de treino mas uma performance ruim nos dados de teste. Portanto, é importante que os dados nas duas bases apresentem distribuições de frequência não muito discrepantes.
 
 **Figura 8** - Base de treinamento e de teste após a separação.
 
