@@ -36,7 +36,7 @@ Os artefatos que serão criados no projeto são:
   1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos;
   2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos;
   3. *game_event_id*: identificador único de cada evento;
-  4. *game_id*: identificador único de cada jogo;
+  4. *game_id*: identificador único de cada jogo (não é informada a diferença em relação à variável *game_event_id*);
   5. *lat*: latitude do estádio em que o jogo foi realizado;
   6. *lon*: longitude do estádio em que o jogo foi realizado;
   7. *loc_x*: localização do arremesso no eixo-x (-250 = canto inferior direito da quadra até 250 = canto superior direito da quadra, em que a cesta está no centro direito);
