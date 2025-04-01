@@ -87,33 +87,33 @@ Antes de inicializar o MLFlow server, foi criada uma variável de ambiente no Wi
 
 ![Variável de ambiente](variavel_ambiente.PNG)
 
-A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
+A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos. A versão do Python utilizada foi a 3.11.9.
 
-**Figura 3** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento.
+**Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento.
 
 ![Pipeline de "PreparacaoDados" para a base de desenvolvimento](preparacaoDados_1.PNG)
 
 A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de produção, o qual também remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
-**Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção.
+**Figura 5** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção.
 
 ![Pipeline de "PreparacaoDados" para a base de produção](preparacaoDados_2.PNG)
 
 A imagem a seguir mostra os arquivos filtrados e com eliminação de valores faltantes salvos na pasta *02_intermediate*.
 
-**Figura 5** - Imagem dos arquivos filtrados.
+**Figura 6** - Imagem dos arquivos filtrados.
 
 ![Imagem dos arquivos filtrados](preparacaoDados_5.PNG)
 
 A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento e teste.
 
-**Figura 6** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste.
+**Figura 7** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste.
 
 ![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
 
 A imagem a seguir mostra os arquivos de treinamento e de teste, após a separação em 80% para treinamento e o restante para teste.
 
-**Figura 7** - Base de treinamento e de teste após a separação.
+**Figura 8** - Base de treinamento e de teste após a separação.
 
 ![Bases de treinamento e teste](preparacaoDados_4.PNG)
 
@@ -121,31 +121,31 @@ A imagem a seguir mostra os arquivos de treinamento e de teste, após a separaç
 
 A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as métricas de *log loss* e *F1 score*.
 
-**Figura 8** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão.
+**Figura 9** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão.
 
 ![Pipeline de "Treinamento" da árvore de decisão](treinamento_1.PNG)
 
 A próxima imagem mostra o artefato referente ao modelo de árvore de decisão.
 
-**Figura 9** - Artefato do modelo de árvore de decisão:
+**Figura 10** - Artefato do modelo de árvore de decisão:
 
 ![Artefato do modelo de árvore de decisão](treinamento_11.PNG)
 
 A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as métricas de *log loss* e *F1 score*.
 
-**Figura 10** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística.
+**Figura 11** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística.
 
 ![Pipeline de "Treinamento" da regressão logística](treinamento_2.PNG)
 
 A imagem a seguir mostra o artefato da regressão logística.
 
-**Figura 11** - Artefato do modelo de regressão logística.
+**Figura 12** - Artefato do modelo de regressão logística.
 
 ![Artefato de modelo de regressão logística](treinamento_21.PNG)
 
 A imagem a seguir mostra os modelos salvos na pasta *06_models*.
 
-**Figura 12** - Modelos salvos.
+**Figura 13** - Modelos salvos.
 
 ![Modelos salvos](modelos_salvos.PNG)
 
@@ -155,7 +155,7 @@ O modelo escolhido para finalização foi a **regressão logística**, pois apre
 
 A imagem a seguir mostra a inicialização do MLFlow server.
 
-**Figura 13** - Inicialização do MLFlow server.
+**Figura 14** - Inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
@@ -163,14 +163,14 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 **mlflow models serve -m runs:/c72493264c9147eb88437811c3941233/model -p 5001**
 
-**Figura 14** - Inicialização da API do modelo escolhido usando o MLFlow.
+**Figura 15** - Inicialização da API do modelo escolhido usando o MLFlow.
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
 ### a)
 O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em um distribuição com característica bimodais, que não se assemelha à distribuição Normal.
 
-**Figura 15** - Histogramas da variável *lon* nas bases de desenvolvimento e de produção.
+**Figura 16** - Histogramas da variável *lon* nas bases de desenvolvimento e de produção.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="histogram_dev_lon.png" alt="Image 1" style="width: 48%;"/>
@@ -179,7 +179,7 @@ O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero.
 
 As diferenças significativas nas distribuições entre os dados de desenvolvimento e de treinamento ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
 
-**Figura 16** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
+**Figura 17** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="histogram_dev_minutes_remaining.png" alt="Image 1" style="width: 48%;"/>
