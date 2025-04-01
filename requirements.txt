@@ -13,3 +13,4 @@ pycaret
 mlflow
 scikit-optimize
 virtualenv
+streamlit

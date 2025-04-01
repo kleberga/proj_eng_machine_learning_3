@@ -10,7 +10,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
         node(
             nodes.pipeline_aplicacao,
-            inputs=["data_filtered_prod", "params:url_api"],
-            outputs=None
+            inputs=["data_filtered_prod", "params:url_api",  "model_lr"],
+            outputs='predictions'
         )
     ])

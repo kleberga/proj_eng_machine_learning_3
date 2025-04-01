@@ -39,3 +39,7 @@ model_dt:
   type: pickle.PickleDataset
   filepath: data/06_models/model_dt.pkl
   versioned: true
+
+predictions:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/predictions.parquet
