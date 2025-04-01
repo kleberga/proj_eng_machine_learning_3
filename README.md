@@ -119,7 +119,7 @@ A imagem a seguir mostra os arquivos de treinamento e de teste, após a separaç
 
 ## Questão 6
 
-A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as métricas de *log loss* e *F1 score*.
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão. Os valores calculados de *log loss* e *F1 score* para o melhor modelo escolhido, utilizando os dados de teste, foram 16,14 e 0,548, respectivamente.
 
 **Figura 9** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão.
 
@@ -131,7 +131,7 @@ A próxima imagem mostra o artefato referente ao modelo de árvore de decisão.
 
 ![Artefato do modelo de árvore de decisão](treinamento_11.PNG)
 
-A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as métricas de *log loss* e *F1 score*.
+A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística. Os valores de *log loss* e *F1 score* obtidos pelo melhor modelo escolhido, utilizando a base de teste, foram 0,71 e 0,552, respectivamente.
 
 **Figura 11** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística.
 
