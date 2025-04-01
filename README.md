@@ -44,7 +44,7 @@ Os artefatos que serão criados no projeto são:
   9. *minutes_remaining*: minutos faltando para terminar um período do jogo (máximo de 12);
   10. *period*: período do jogo (em geral, há no máximo 4, mas em caso de empate, ocorrerão períodos adicionais);
   11. *playoffs*: marcação se o jogo não ocorreu nos playoffs (0) ou ocorreu em playoffs (1);
-  12. *season*: anos a que se refere a temporada da NBA na qual o jogo ocorreu;
+  12. *season*: anos nos quais ocorreu a temporada da NBA;
   13. *seconds_remaining*: segundos faltando em um período;
   14. *shot_distance*: distância (em metros) do arremesso em relação à cesta;
   15. *shot_type*: pontos que poderiam ser obtidos no arremesso (2 ou 3 pontos);
