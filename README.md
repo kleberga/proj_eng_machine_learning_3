@@ -152,7 +152,9 @@ A imagem a seguir mostra a inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
-A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow. O comando executado no terminal foi **mlflow models serve -m runs:/c72493264c9147eb88437811c3941233/model -p 5001**.
+A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow. O comando executado no terminal foi o seguinte:
+
+**mlflow models serve -m runs:/c72493264c9147eb88437811c3941233/model -p 5001**
 
 **Figura 14** - Inicialização da API do modelo escolhido usando o MLFlow.
 
