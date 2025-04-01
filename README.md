@@ -75,7 +75,8 @@ Os artefatos que serão criados no projeto são:
 - **model_dt.pkl**: modelo de árvore de decisão criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **model_lr.pkl**: modelo de regressão logística criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **modelo final registrado**: modelo final registrado no MLFlow;
-- **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção; e
+- **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção;
+- **predictions.parquet**: base de dados contendo as projeções realizadas pelo modelo final (registrado no MLFlow) utilizando como input os dados de produção; e
 - **dashboard**: dashboard para monitorar o modelo em produção.
 
 ## Questão 5
@@ -152,11 +153,64 @@ A imagem a seguir mostra a inicialização do MLFlow server.
 
 ![Inicialização do MLFlow server](iniciar_server.PNG)
 
-A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow.
+A próxima imagem mostra a inicialização da API local do modelo escolhido ("regressão logística") usando o MLFlow. O comando executado no terminal foi o seguinte:
+
+**mlflow models serve -m runs:/c72493264c9147eb88437811c3941233/model -p 5001**
 
 **Figura 14** - Inicialização da API do modelo escolhido usando o MLFlow.
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
 ### a)
-O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a 
+O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em um distribuição com característica bimodais, que não se assemelha à distribuição Normal.
+
+**Figura 15** - Histogramas da variável *lon* nas bases de desenvolvimento e de produção.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_lon.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_lon.png" alt="Image 2" style="width: 48%;"/>
+</div>
+
+As diferenças significativas nas distribuições entre os dados de desenvolvimento e de treinamento ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
+
+**Figura 16** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_minutes_remaining.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_minutes_remaining.png" alt="Image 2" style="width: 48%;"/>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_period.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_period.png" alt="Image 2" style="width: 48%;"/>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_shot_distance.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_shot_distance.png" alt="Image 2" style="width: 48%;"/>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="histogram_dev_shot_made_flag.png" alt="Image 1" style="width: 48%;"/>
+  <img src="histogram_prod_shot_made_flag.png" alt="Image 2" style="width: 48%;"/>
+</div>
+
+Nesta situação, entendo-se que as distribuições das variáveis sofreram de fato alterações (não se trata de erro de mensuração), deveria ocorrer um novo processo de busca por um modelo adequado, desta vez utilizando-se apenas os dados de produção, pois os dados de desenvolvimento não refletem mais, de forma adequada, a população que originou aqueles dados.
+
+### b)
+
+Quando a variável de resposta está disponível, a avaliação do modelo em operação pode ser feita a seguinte forma:
+1. Utilizando métricas de performance. Para modelos de classificação, podem ser utilizadas as métricas como *accuracy*, *recall*, *precision*, *F1-score* e área sob a curva ROC. Para modelos de regressão, podem ser utilizadas as métricas de Erro Absoluto Médio, Erro Quadrático Médio e R-quadrado;
+2. Monitorar a ocorrência de *concept drif* comparando os *inputs* e as projeções;
+3. Identificar erros, quando as projeções se distanciaram muito dos *inputs*; e
+4. Atualizar o modelo periodicamente com novos dados, a fim de mantê-lo atualizado.
+
+Quando a variável de resposta não está disponível, podem ser utilizadas as seguintes medidas:
+1. Verificar a qualidade dos *inputs*;
+2. Comparar as projeções do modelo com benchmarks disponíveis no mercado;
+3. Detectar *outliers* nos dados de *input*, a fim de assegurar que o modelo não está exposto a dados muito discrepantes daqueles usados em seu treinamento;
+4. Realizar *A/B Testing*, que consiste que em comparar as projeções do modelo com aquelas geradas por outro modelo mais simples; e
+5. Receber *feedback* dos usuários.
+
+### c)
+
+A estratégia reativa de retreinamento do modelo em operação consiste em atualizar o modelo em resposta a uma redução observável na performance do modelo ou a mudanças nos dados. O processo consiste em coletar novos dados, combinar os mesmos com os dados históricos, retreinar o modelo e validar o seu desempenho em relação ao modelo anterior. A vantagem dessa abordagem é garantir que o retreinamento irá ocorrer somente quando necessário, reduzindo custos computacionais. Por outro lado, a desvantagem é que, durante o intervalo de tempo entre a perda de performance do modelo e sua melhoria, o modelo irá gerar resultados de baixa qualidade.
+
+A estratégia preditiva de retreinamento do modelo, por sua vez, consiste em atualizar o modelo proativamente, se antecipando a mudanças nos dados ou requisitos operacionais. O processo consiste em criar um pipeline que automaticamente coleta novos dados e retreina o modelo periodicamente. A vantagem desta abordagem é a antecipação em relação a possíveis problemas que possam prejudicar a performance do modelo. A desvantagem é que retreinar o modelo em intervalos fixos de tempo pode significar uso desnecessário de recursos computacionais para retreinar um modelo que está com performance adequada.
