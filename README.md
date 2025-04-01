@@ -167,6 +167,18 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
+A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow.
+
+**Figura 16** - PipelineAplicação no MLFlow.
+
+![PipelineAplicação - registro](pipelineAplicacao_1.PNG)
+
+A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação no MLFlow.
+
+**Figura 16** - Artefato do PipelineAplicação no MLFlow.
+
+![PipelineAplicação - artefato](pipelineAplicacao_2.PNG)
+
 ### a)
 O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em um distribuição com característica bimodais, que não se assemelha à distribuição Normal.
 
