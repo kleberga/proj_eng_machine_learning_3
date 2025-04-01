@@ -25,14 +25,14 @@ A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 - **Streamlit**: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dandos. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e adicionar botões e menus que permitam ao usuário interagir com a aplicação. Além disso, a aplicação pode auxiliar a monitorar e gerenciar a saúde dos modelos;
 - **MLFlow**: permite o rastreamento de experimentos de machine learning, registro e controle de versões dos modelos e provisionamento (deployment) em plataformas na nuvem, em contêineres Docker ou em REST APIs;
 - **PyCaret**: é uma biblioteca que possui funções que automatizam o pré-processamento, treinamento e avaliação de modelos de machine learning. Ela permite buscar os melhores hiperparâmetros e comparar modelos de forma fácil e com a utilização de poucas funções. Pode ser utilizada também na atualização de modelos; e
-- **Scikit-Learn**: é uma ferramenta que possui funções para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos.
+- **Scikit-Learn**: é uma ferramenta que possui funções para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos.  
 
 ## Questão 4
 
 Os artefatos que serão criados no projeto são:
 
 - **diagrama_2.png**: diagrama contendo todas as etapas necessárias do projeto;
-- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para treinamento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são:
+- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para treinamento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são (a definição consta neste site https://www.kaggle.com/competitions/kobe-bryant-shot-selection/discussion/20888):
   1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos;
   2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos;
   3. *game_event_id*: identificador único de cada evento;
@@ -167,31 +167,31 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
-A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow.
+A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow. Os valores obtidos de *F1 score* e de *log loss* foram 0 e 0,892, respectivamente.
 
 **Figura 16** - PipelineAplicação no MLFlow.
 
 ![PipelineAplicação - registro](pipelineAplicacao_1.PNG)
 
-A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação no MLFlow.
+A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação no MLFlow, o qual contém as projeções geradas a partir da base de produção.
 
-**Figura 16** - Artefato do PipelineAplicação no MLFlow.
+**Figura 17** - Artefato do PipelineAplicação no MLFlow.
 
 ![PipelineAplicação - artefato](pipelineAplicacao_2.PNG)
 
 ### a)
-O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição de cada variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de treinamento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em um distribuição com característica bimodais, que não se assemelha à distribuição Normal.
+O modelo não é aderente a essa nova base, pois o valor do *F1 score* foi zero. Este resultado é decorrente da diferença de distribuição que os dados de produção e desenvolvimento possuem em algumas variáveis. O modelo foi treinado utilizando-se apenas os dados de desenvolvimento. Se a distribuição das variáveis fosse similar nas duas bases, era de se esperar que o modelo apresentasse performance similar àquela apresentada com o dados de desenvolvimento. Porém, algumas variáveis possuem distribuições que aparentam ser significativamente diferentes entre as duas bases. A figura a seguir compara os histogramas da variável *lon* na base de desenvolvimento (imagem à esquerda) e na base de produção (imagem à direita). Percebe que na base de desenvolvimento, o valor da variável parece se concentrar em torno dos valores -118.3 e -118.2, com o formato de uma distribuição Normal. Já na base de produção, os valores se concentram entre -118.5 e -118.4 e também entre -118.1 e -118.0, em uma distribuição com característica bimodal, que não se assemelha à distribuição Normal.
 
-**Figura 16** - Histogramas da variável *lon* nas bases de desenvolvimento e de produção.
+**Figura 18** - Histogramas da variável *lon* nas bases de desenvolvimento e de produção. 
 
 <div style="display: flex; justify-content: space-between;">
   <img src="histogram_dev_lon.png" alt="Image 1" style="width: 48%;"/>
   <img src="histogram_prod_lon.png" alt="Image 2" style="width: 48%;"/>
 </div>
 
-As diferenças significativas nas distribuições entre os dados de desenvolvimento e de treinamento ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
+As diferenças significativas nas distribuições entre os dados de desenvolvimento e de produção ocorrem também nas variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag*, conforme pode ser observado na figura abaixo.
 
-**Figura 17** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
+**Figura 19** - Histogramas das variáveis *minutes_remaining*, *period*, *shot_distance* e *shot_made_flag* nas bases de desenvolvimento e de produção.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="histogram_dev_minutes_remaining.png" alt="Image 1" style="width: 48%;"/>
