@@ -75,7 +75,8 @@ Os artefatos que serão criados no projeto são:
 - **model_dt.pkl**: modelo de árvore de decisão criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **model_lr.pkl**: modelo de regressão logística criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **modelo final registrado**: modelo final registrado no MLFlow;
-- **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção; e
+- **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção;
+- **predictions.parquet**: base de dados contendo as projeções realizadas pelo modelo final (registrado no MLFlow) utilizando como input os dados de produção; e
 - **dashboard**: dashboard para monitorar o modelo em produção.
 
 ## Questão 5
