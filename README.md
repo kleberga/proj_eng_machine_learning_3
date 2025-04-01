@@ -87,13 +87,13 @@ Antes de inicializar o MLFlow server, foi criada uma variável de ambiente no Wi
 
 ![Variável de ambiente](variavel_ambiente.PNG)
 
-A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos. A versão do Python utilizada foi a 3.11.9.
+A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos. A versão do Python utilizada foi a 3.11.9. A base filtrada de desenvolvimento possui 7 colunas e 20.285 linhas.
 
 **Figura 4** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento.
 
 ![Pipeline de "PreparacaoDados" para a base de desenvolvimento](preparacaoDados_1.PNG)
 
-A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de produção, o qual também remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
+A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de produção, o qual também remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos. A base filtrada de produção possui 7 colunas e 5.412 linhas.
 
 **Figura 5** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de produção.
 
