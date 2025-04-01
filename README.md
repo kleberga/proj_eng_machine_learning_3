@@ -167,7 +167,7 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
-A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow. Os valores obtidos de *F1 score* e de *log loss* foram 0 e 0,892, respectivamente.
+A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow. Os valores obtidos de *log loss* e *F1 score* foram 0,892 e 0, respectivamente.
 
 **Figura 16** - PipelineAplicação no MLFlow.
 
