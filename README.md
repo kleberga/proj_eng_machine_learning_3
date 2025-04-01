@@ -81,6 +81,12 @@ Os artefatos que serão criados no projeto são:
 
 ## Questão 5
 
+Antes de inicializar o MLFlow server, foi criada uma variável de ambiente no Windows, conforme a imagem abaixo.
+
+**Figura 3** - Variável de ambiente do MLFlow.
+
+![Variável de ambiente](variavel_ambiente.PNG)
+
 A imagem abaixo mostra o pipeline do MLFlow com o nome "PreparacaoDados" para a base de desenvolvimento. Este pipeline remove os valores faltantes e filtra apenas as variáveis a serem utilizadas nos modelos.
 
 **Figura 3** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para manipulação da base de desenvolvimento.
