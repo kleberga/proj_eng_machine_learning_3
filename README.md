@@ -167,13 +167,13 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
-A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow.
+A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow. Os valores obtidos de *F1 score* e de *log loss* foram 0 e 0,892, respectivamente.
 
 **Figura 16** - PipelineAplicação no MLFlow.
 
 ![PipelineAplicação - registro](pipelineAplicacao_1.PNG)
 
-A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação no MLFlow.
+A imagem a seguir mostra o registro do artefato gerado pelo PipelineAplicação no MLFlow, o qual contém as projeções geradas a partir da base de produção.
 
 **Figura 17** - Artefato do PipelineAplicação no MLFlow.
 
