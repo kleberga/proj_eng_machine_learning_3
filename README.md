@@ -74,7 +74,7 @@ Os artefatos que serão criados no projeto são:
 - **base_train.parquet**: representa 80% dos dados da base "data_filtered_dev.parquet", a ser usada para treinar os modelos. A divisão foi realizada de modo aleatório e com estratificação pela variável *shot_made_flag*;
 - **model_dt.pkl**: modelo de árvore de decisão criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **model_lr.pkl**: modelo de regressão logística criado com a base de treinamento. O modelo é salvo com controle de versão;
-- **modelo final registrado**: modelo final registrado no MLFlow;
+- **modelo final registrado**: modelo final registrado no MLFlow, escolhido com base nas melhores métricas de performance;
 - **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção;
 - **predictions.parquet**: base de dados contendo as projeções realizadas pelo modelo final (registrado no MLFlow) utilizando como input os dados de produção; e
 - **dashboard**: dashboard para monitorar o modelo em produção.
