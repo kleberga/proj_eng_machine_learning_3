@@ -22,7 +22,7 @@ A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 
 ## Questão 3
 
-- **Streamlit**: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dandos. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e adicionar botões e menus que permitam ao usuário interagir com a aplicação. Além disso, a aplicação pode auxiliar a monitorar e gerenciar a saúde dos modelos;
+- **Streamlit**: é uma ferramenta para construir aplicações baseadas na web para machine learning e ciência de dados. Ela permite criar dashboards interativos, utilizar outras bibliotecas, como Matplotlib, para visualizar os dados e adicionar botões e menus que permitam ao usuário interagir com a aplicação. Além disso, a aplicação pode auxiliar a monitorar e gerenciar a saúde dos modelos;
 - **MLFlow**: permite o rastreamento de experimentos de machine learning, registro e controle de versões dos modelos e provisionamento (deployment) em plataformas na nuvem, em contêineres Docker ou em REST APIs;
 - **PyCaret**: é uma biblioteca que possui funções que automatizam o pré-processamento, treinamento e avaliação de modelos de machine learning. Ela permite buscar os melhores hiperparâmetros e comparar modelos de forma fácil e com a utilização de poucas funções. Pode ser utilizada também na atualização de modelos; e
 - **Scikit-Learn**: é uma ferramenta que possui funções para criação e implementação de modelos de machine learning. Permite pré-processamento de dados, busca pelos melhores hiperparâmetros, seleção de features, treinamento, avaliação e atualização de modelos.  
@@ -32,11 +32,11 @@ A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 Os artefatos que serão criados no projeto são:
 
 - **diagrama_2.png**: diagrama contendo todas as etapas necessárias do projeto;
-- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para treinamento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são (a definição consta neste site https://www.kaggle.com/competitions/kobe-bryant-shot-selection/discussion/20888):
+- **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para desenvolvimento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são (a definição consta neste site https://www.kaggle.com/competitions/kobe-bryant-shot-selection/discussion/20888):
   1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos;
   2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos;
   3. *game_event_id*: identificador único de cada evento;
-  4. *game_id*: identificador único de cada jogo;
+  4. *game_id*: identificador único de cada jogo (não é informada a diferença em relação à variável *game_event_id*);
   5. *lat*: latitude do estádio em que o jogo foi realizado;
   6. *lon*: longitude do estádio em que o jogo foi realizado;
   7. *loc_x*: localização do arremesso no eixo-x (-250 = canto inferior direito da quadra até 250 = canto superior direito da quadra, em que a cesta está no centro direito);
@@ -44,13 +44,13 @@ Os artefatos que serão criados no projeto são:
   9. *minutes_remaining*: minutos faltando para terminar um período do jogo (máximo de 12);
   10. *period*: período do jogo (em geral, há no máximo 4, mas em caso de empate, ocorrerão períodos adicionais);
   11. *playoffs*: marcação se o jogo não ocorreu nos playoffs (0) ou ocorreu em playoffs (1);
-  12. *season*: temporada da NBA;
+  12. *season*: anos nos quais ocorreu a temporada da NBA;
   13. *seconds_remaining*: segundos faltando em um período;
   14. *shot_distance*: distância (em metros) do arremesso em relação à cesta;
   15. *shot_type*: pontos que poderiam ser obtidos no arremesso (2 ou 3 pontos);
   16. *shot_zone_area*: área da quadra de basquete de onde o arremesso foi executado (BC, C, LC, L, RC, R);
   17. *shot_zone_basic*: zona da quadra de basquete de onde o arremesso foi executado (7 diferentes áreas);
-  18. *shot_zone_range*: intervalo (em metros) de onde o arremesso foi executado (<8, 8-16, 16-24, 24+, fundo da quadra);
+  18. *shot_zone_range*: intervalo (em metros) do arremesso em relação à cesta (<8, 8-16, 16-24, 24+, fundo da quadra);
   19. *team_id*: código identificador do time de Kobe Bryant (Los Angeles Lakers - LA) (mesmo código em toda a base de dados);
   20. *team_name*: nome do time (LA) (mesmo nome em toda a base de dados);
   21. *game_date*: data em que o jogo ocorreu
@@ -74,7 +74,7 @@ Os artefatos que serão criados no projeto são:
 - **base_train.parquet**: representa 80% dos dados da base "data_filtered_dev.parquet", a ser usada para treinar os modelos. A divisão foi realizada de modo aleatório e com estratificação pela variável *shot_made_flag*;
 - **model_dt.pkl**: modelo de árvore de decisão criado com a base de treinamento. O modelo é salvo com controle de versão;
 - **model_lr.pkl**: modelo de regressão logística criado com a base de treinamento. O modelo é salvo com controle de versão;
-- **modelo final registrado**: modelo final registrado no MLFlow;
+- **modelo final registrado**: modelo final registrado no MLFlow, escolhido com base nas melhores métricas de performance;
 - **pipeline de aplicação**: pipeline para provisionamento do modelo final escolhido para ser aplicado na base de produção;
 - **predictions.parquet**: base de dados contendo as projeções realizadas pelo modelo final (registrado no MLFlow) utilizando como input os dados de produção; e
 - **dashboard**: dashboard para monitorar o modelo em produção.
@@ -105,13 +105,13 @@ A imagem a seguir mostra os arquivos filtrados e com eliminação de valores fal
 
 ![Imagem dos arquivos filtrados](preparacaoDados_5.PNG)
 
-A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento e teste.
+A imagem a seguir mostra o pipeline do MLFlow com o nome "PreparacaoDados" para separar as bases em treinamento (80% dos dados da base filtrada) e teste (20% da base filtrada). A separação ocorreu de forma aleatória e com estratificação pela variável *shot_made_flag*.
 
 **Figura 7** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "PreparacaoDados" para separar a base em treinamento e teste.
 
 ![Pipeline de "PreparacaoDados" para separar a base em treinamento e teste](preparacaoDados_3.PNG)
 
-A imagem a seguir mostra os arquivos de treinamento e de teste, após a separação em 80% para treinamento e o restante para teste.
+A imagem a seguir mostra os arquivos de treinamento e de teste, após a separação em 80% para treinamento e o restante para teste. A escolha das bases de treino e teste é fundamental para a definição do modelo final a ser utilizado. O ideal é que a escolha dos dados que irão compor as bases treino e teste seja feita de forma aleatória e com estratificação da variável *target*. Se a escolha não for aleatória e/ou não houver estratificação, pode haver viés nos dados e existe o risco do modelo apresentar uma boa perfomance nos dados de treino mas uma performance ruim nos dados de teste. Portanto, é importante que os dados nas duas bases apresentem distribuições de frequência não muito discrepantes.
 
 **Figura 8** - Base de treinamento e de teste após a separação.
 
@@ -119,7 +119,7 @@ A imagem a seguir mostra os arquivos de treinamento e de teste, após a separaç
 
 ## Questão 6
 
-A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão, juntamente com as métricas de *log loss* e *F1 score*.
+A imagem a seguir apresentar o pipeline do MLFlow com o nome "Treinamento" do modelo de árvore de decisão. Os valores calculados de *log loss* e *F1 score* para o melhor modelo escolhido, utilizando os dados de teste, foram 16,14 e 0,548, respectivamente.
 
 **Figura 9** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de árvore de decisão.
 
@@ -131,7 +131,7 @@ A próxima imagem mostra o artefato referente ao modelo de árvore de decisão.
 
 ![Artefato do modelo de árvore de decisão](treinamento_11.PNG)
 
-A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística, juntamente com as métricas de *log loss* e *F1 score*.
+A imagem a seguir apresenta o pipeline do MLFlow com o nome "Treinamento" do modelo de regressão logística. Os valores de *log loss* e *F1 score* obtidos pelo melhor modelo escolhido, utilizando a base de teste, foram 0,71 e 0,552, respectivamente.
 
 **Figura 11** - Imagem do pipeline de processamento de dados com o MLFlow, rodada (run) com o nome "Treinamento" do modelo de regressão logística.
 
@@ -167,7 +167,7 @@ A próxima imagem mostra a inicialização da API local do modelo escolhido ("re
 
 ![Provisionamento do modelo](provisionamento.PNG)
 
-A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow. Os valores obtidos de *F1 score* e de *log loss* foram 0 e 0,892, respectivamente.
+A imagem a seguir mostra o registro da execução do PipelineAplicação no MLFlow. Os valores obtidos de *log loss* e *F1 score* foram 0,892 e 0, respectivamente.
 
 **Figura 16** - PipelineAplicação no MLFlow.
 
@@ -231,4 +231,8 @@ Quando a variável de resposta não está disponível, podem ser utilizadas as s
 
 A estratégia reativa de retreinamento do modelo em operação consiste em atualizar o modelo em resposta a uma redução observável na performance do modelo ou a mudanças nos dados. O processo consiste em coletar novos dados, combinar os mesmos com os dados históricos, retreinar o modelo e validar o seu desempenho em relação ao modelo anterior. A vantagem dessa abordagem é garantir que o retreinamento irá ocorrer somente quando necessário, reduzindo custos computacionais. Por outro lado, a desvantagem é que, durante o intervalo de tempo entre a perda de performance do modelo e sua melhoria, o modelo irá gerar resultados de baixa qualidade.
 
-A estratégia preditiva de retreinamento do modelo, por sua vez, consiste em atualizar o modelo proativamente, se antecipando a mudanças nos dados ou requisitos operacionais. O processo consiste em criar um pipeline que automaticamente coleta novos dados e retreina o modelo periodicamente. A vantagem desta abordagem é a antecipação em relação a possíveis problemas que possam prejudicar a performance do modelo. A desvantagem é que retreinar o modelo em intervalos fixos de tempo pode significar uso desnecessário de recursos computacionais para retreinar um modelo que está com performance adequada.
+A estratégia preditiva de retreinamento do modelo, por sua vez, consiste em atualizar o modelo proativamente, se antecipando a mudanças nos dados ou requisitos operacionais. O processo consiste em criar um pipeline que automaticamente coleta novos dados e retreina o modelo periodicamente. A vantagem desta abordagem é a antecipação em relação a possíveis problemas que possam prejudicar a performance do modelo. A desvantagem é que retreinar o modelo em intervalos fixos de tempo pode significar uso desnecessário de recursos computacionais, pois o retreinamento ocorrerá para um modelo que está com performance adequada.
+
+## Questão 8
+
+O dashboard de monitoramento da operação, utilizando o Streamlit, consta na pasta *streamlit* do projeto.
