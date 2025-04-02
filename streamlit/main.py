@@ -41,4 +41,4 @@ st.json(list(input_data.values()))
 
 projecao_arremesso = projecao(input_data)
 
-st.write(f"O arremesso foi bem sucedido: %s" %("Sim" if projecao_arremesso == 1 else "Não"))
+st.write(f"O arremesso foi bem sucedido: %s" %("sim" if projecao_arremesso == 1 else "não"))
