@@ -18,7 +18,7 @@ A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 
 **Figura 2** - Diagrama das etapas necessárias para o projeto.
 
-![Diagrama](diagrama_2.png)
+![Diagrama](diagrama_3.png)
 
 ## Questão 3
 
