@@ -31,7 +31,7 @@ A imagem a seguir mostra as etapas necessárias para conclusão deste projeto.
 
 Os artefatos que serão criados no projeto são:
 
-- **diagrama_2.png**: diagrama contendo todas as etapas necessárias do projeto;
+- **diagrama_3.png**: diagrama contendo todas as etapas necessárias do projeto;
 - **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para desenvolvimento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são (a definição consta neste site https://www.kaggle.com/competitions/kobe-bryant-shot-selection/discussion/20888):
   1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos. Formato: string;
   2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos. Formato: string;
