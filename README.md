@@ -33,31 +33,31 @@ Os artefatos que serão criados no projeto são:
 
 - **diagrama_2.png**: diagrama contendo todas as etapas necessárias do projeto;
 - **dataset_kobe_dev.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada para desenvolvimento dos modelos. A base contém 25 colunas e 24.271 linhas. As colunas da base de dados são (a definição consta neste site https://www.kaggle.com/competitions/kobe-bryant-shot-selection/discussion/20888):
-  1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos;
-  2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos;
-  3. *game_event_id*: identificador único de cada evento;
-  4. *game_id*: identificador único de cada jogo (não é informada a diferença em relação à variável *game_event_id*);
-  5. *lat*: latitude do estádio em que o jogo foi realizado;
-  6. *lon*: longitude do estádio em que o jogo foi realizado;
-  7. *loc_x*: localização do arremesso no eixo-x (-250 = canto inferior direito da quadra até 250 = canto superior direito da quadra, em que a cesta está no centro direito);
-  8. *loc_y*: localização do arremesso no eixo-y (-40 = lado direito até 900 = lado esquerdo, em que a cesta está no centro direito);
-  9. *minutes_remaining*: minutos faltando para terminar um período do jogo (máximo de 12);
-  10. *period*: período do jogo (em geral, há no máximo 4, mas em caso de empate, ocorrerão períodos adicionais);
-  11. *playoffs*: marcação se o jogo não ocorreu nos playoffs (0) ou ocorreu em playoffs (1);
-  12. *season*: anos nos quais ocorreu a temporada da NBA;
-  13. *seconds_remaining*: segundos faltando em um período;
-  14. *shot_distance*: distância (em metros) do arremesso em relação à cesta;
-  15. *shot_type*: pontos que poderiam ser obtidos no arremesso (2 ou 3 pontos);
-  16. *shot_zone_area*: área da quadra de basquete de onde o arremesso foi executado (BC, C, LC, L, RC, R);
-  17. *shot_zone_basic*: zona da quadra de basquete de onde o arremesso foi executado (7 diferentes áreas);
-  18. *shot_zone_range*: intervalo (em metros) do arremesso em relação à cesta (<8, 8-16, 16-24, 24+, fundo da quadra);
-  19. *team_id*: código identificador do time de Kobe Bryant (Los Angeles Lakers - LA) (mesmo código em toda a base de dados);
-  20. *team_name*: nome do time (LA) (mesmo nome em toda a base de dados);
-  21. *game_date*: data em que o jogo ocorreu
-  22. *matchup*: equipes que disputaram a partida (LA versus outra equipe);
-  23. *opponent*: equipe adversária de LA na partida;
-  24. *shot_made_flag*: marcação se o arremesso teve sucesso (1) ou não (0); e
-  25. *shot_id*: identificador único de cada arremesso.
+  1. *action_type*: tipos de arremessos, de forma mais detalhada, totalizado 57 diferentes tipos. Formato: string;
+  2. *combined_shot_type*: tipos de arremessos, de forma mais geral, totalizado 6 diferentes tipos. Formato: string;
+  3. *game_event_id*: identificador único de cada evento. Formato: int64;
+  4. *game_id*: identificador único de cada jogo (não é informada a diferença em relação à variável *game_event_id*). Formato: int64;
+  5. *lat*: latitude do estádio em que o jogo foi realizado. Formato: float64;
+  6. *lon*: longitude do estádio em que o jogo foi realizado. Formato: float64;
+  7. *loc_x*: localização do arremesso no eixo-x (-250 = canto inferior direito da quadra até 250 = canto superior direito da quadra, em que a cesta está no centro direito). Formato: int64;
+  8. *loc_y*: localização do arremesso no eixo-y (-40 = lado direito até 900 = lado esquerdo, em que a cesta está no centro direito). Formato: int64;
+  9. *minutes_remaining*: minutos faltando para terminar um período do jogo (máximo de 12). Formato: int64;
+  10. *period*: período do jogo (em geral, há no máximo 4, mas em caso de empate, ocorrerão períodos adicionais). Formato: int64;
+  11. *playoffs*: marcação se o jogo não ocorreu nos playoffs (0) ou ocorreu em playoffs (1). Formato: int64;
+  12. *season*: anos nos quais ocorreu a temporada da NBA. Formato: string;
+  13. *seconds_remaining*: segundos faltando em um período. Formato: int64;
+  14. *shot_distance*: distância (em metros) do arremesso em relação à cesta. Formato: int64;
+  15. *shot_type*: pontos que poderiam ser obtidos no arremesso (2 ou 3 pontos). Formato: string;
+  16. *shot_zone_area*: área da quadra de basquete de onde o arremesso foi executado (BC, C, LC, L, RC, R). Formato: string;
+  17. *shot_zone_basic*: zona da quadra de basquete de onde o arremesso foi executado (7 diferentes áreas). Formato: string;
+  18. *shot_zone_range*: intervalo (em metros) do arremesso em relação à cesta (<8, 8-16, 16-24, 24+, fundo da quadra). Formato: string;
+  19. *team_id*: código identificador do time de Kobe Bryant (Los Angeles Lakers - LA) (mesmo código em toda a base de dados). Formato: int64;
+  20. *team_name*: nome do time (LA) (mesmo nome em toda a base de dados). Formato: string;
+  21. *game_date*: data em que o jogo ocorreu. Formato: string;
+  22. *matchup*: equipes que disputaram a partida (LA versus outra equipe). Formato: string;
+  23. *opponent*: equipe adversária de LA na partida. Formato: string;
+  24. *shot_made_flag*: marcação se o arremesso teve sucesso (1) ou não (0). Formato: float64; e
+  25. *shot_id*: identificador único de cada arremesso. Formato: int64.
 - **dataset_kobe_prod.parquet**: base de dados, que contém os arremessos de Kobe Bryant, a ser utilizada com o modelo final no ambiente de produção. A base contém 25 colunas e 6.426 linhas. As colunas da base de dados são as mesmas da base anterior;
 - **df_explorado_dev.xlsx**: base de dados contendo os nomes das colunas, o tipo de cada coluna, a quantidade valores faltantes em cada coluna e o número total de observações de cada coluna da base de desenvolvimento de modelos;
 - **df_explorado_prod.xlsx**: base de dados contendo os nomes das colunas, o tipo de cada coluna, a quantidade valores faltantes em cada coluna e o número total de observações de cada coluna da base a ser utilizada com o modelo final no ambiente de produção;
