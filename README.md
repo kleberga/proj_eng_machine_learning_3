@@ -235,4 +235,4 @@ A estratégia preditiva de retreinamento do modelo, por sua vez, consiste em atu
 
 ## Questão 8
 
-O dashboard de monitoramento da operação, utilizando o Streamlit, consta na pasta *streamlit* do projeto.
+O dashboard de monitoramento da operação, utilizando o Streamlit, consta na pasta *streamlit* na raiz do projeto.
